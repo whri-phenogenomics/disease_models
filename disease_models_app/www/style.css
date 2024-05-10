@@ -1,0 +1,186 @@
+/*logo title font*/
+.main-header .logo {
+  font-family: "Arial";
+  font-size: 1.3em;
+  color: rgb(217,219,220);
+}
+
+/*background colour of logo*/
+.skin-blue .main-header .logo {
+  background-color: rgb(245, 128, 38);
+}
+
+/*removing logo colour change when hover*/
+.skin-blue .main-header .logo:hover {
+  background-color: rgb(245, 128, 38);
+}
+
+/*rest of the header*/
+.skin-blue .main-header .navbar {
+  background-color: rgb(245, 128, 38);
+}
+
+/*sidebar colour and font*/
+.skin-blue .main-sidebar {
+  background-color: rgb(245, 128, 38);
+  font-family: "Arial";
+  font-size: 1.3em;
+}
+
+/*active sidebar tab*/
+.skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
+  background-color: rgb(247,251,255);
+  color: rgb(51, 51, 51);
+}
+
+/*other sidebar tabs*/
+.skin-blue .main-sidebar .sidebar .sidebar-menu a{
+  background-color: rgb(245, 128, 38);
+  color: rgb(217,219,220);
+}
+
+/*hover sidebar tabs*/
+.skin-blue .main-sidebar .sidebar .sidebar-menu a:hover {
+  background-color: rgb(247,251,255);
+  color: rgb(51, 51, 51);
+}
+
+/*sidebar toggle button*/
+.skin-blue .main-header .navbar .sidebar-toggle:hover{
+  background-color: rgb(247,251,255);
+  color: rgb(51, 51, 51);
+}
+
+/*body*/
+.content-wrapper, .right-side {
+  background-color: rgb(247,251,255);
+}
+
+
+/*background colour of div boxes*/
+.box.box-solid.bg-light-blue{
+  background-color: #f7fbff !important;
+}
+
+
+/*background box colour of widget boxes*/
+.box-body {
+  background-color: #f7fbff;
+  font-family: "Arial";
+  font-size: 1.1em;
+}
+
+/* sunburst plot background */
+.element.style {
+  background: rgb(247,251,255);
+}
+
+/* remove top border and side shadows of input sliders */
+.box{
+  border-top: medium none #f7fbff;
+  box-shadow: none;
+  background: #f7fbff;
+}
+
+/* colour box headers to match app background */
+.box-header {
+  background-color: #f7fbff;
+}
+
+/* changing colour of summary statistic box to match app header*/
+.small-box.bg-light-blue {
+  background-color: #084594 !important;
+}
+
+/* changing colours and orientation of logos in statistic boxes */
+.small-box .icon-large {
+  color: rgb(217,219,220);
+  bottom: 1px;
+  right: 10px;
+}
+
+/* Text Settings for Main Title Headings */
+#page-title {
+  font-family: "Arial";
+  font-size: 3em;
+}
+
+/* Text Settings for Main Sub-Headings */
+#page-subheading {
+  font-family: "Arial";
+  font-size: 1.5em;
+  padding-left: 14px;
+}
+
+/* Text Settings for Other text on the page */
+#page-text {
+  font-family: "Arial";
+  font-size: 1.2em;
+  padding-left: 14px;
+  padding-right: 14px;
+  line-height: 150%;
+}
+
+/* Text Settings for Text within the Statistics box */
+.small-box p {
+  font-family: "Arial";
+  font-size: 1.1em;
+}
+
+/* Text settings within boxes for Content and Curation pages*/
+.small-box h3 {
+  font-family: "Arial";
+}
+
+/* Changing header colours of boxes in Content and Curation pages to match header colour of app*/
+.box.box-solid.box-primary>.box-header{
+  background: #084594;
+  background-color: #084594;
+}
+
+div#DataTables_Table_0_wrapper{
+  padding-left: 14px;
+  padding-right: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+div#DataTables_Table_1_wrapper{
+  padding-left: 14px;
+  padding-right: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+div#DataTables_Table_2_wrapper{
+  padding-left: 14px;
+  padding-right: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+a#save_button1{
+  margin-left: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+a#save_button2{
+  margin-left: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+a#save_button3{
+  margin-left: 14px;
+  font-family: "Arial";
+  font-size: 1em;
+}
+
+h5{
+  padding-right: 14px;
+}
+
+.js-plotly-plot .plotly div{
+  font-family: "Arial";
+}

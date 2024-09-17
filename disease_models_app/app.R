@@ -1,6 +1,7 @@
 library(shiny)
 library(shinydashboard)
-library(DT)
+library(fst)
+library(reactable)
 library(plotly)
 library(dplyr)
 library(stringr)
@@ -28,54 +29,45 @@ tab_defs <- data.frame(
     "PhenoDigmOther",
     "Review"
   ),
-  tab_icon = c(
-    "home",
-    "table",
-    "dna",
-    "table",
-    "newspaper"
-
-  )
+  tab_icon = c("home", "table", "dna", "table", "newspaper")
 )
 
 tab_builder <- function(text, name, tab_icon) {
-  menuItem(text, 
-           tabName = name, 
+  menuItem(text,
+           tabName = name,
            icon = icon(tab_icon, lib = 'font-awesome'))
 }
 
 all_tabs = list()
 for (tab in 1:nrow(tab_defs)) {
-  all_tabs[[tab]] <-  do.call(tab_builder, tab_defs[tab,])
+  all_tabs[[tab]] <-  do.call(tab_builder, tab_defs[tab, ])
 }
 
-sidebar <- dashboardSidebar(
-  sidebarMenu(id='tabs', .list=all_tabs)
-)
+sidebar <- dashboardSidebar(sidebarMenu(id = 'tabs', .list = all_tabs))
 
 app_ui <- function(request) {
-  tagList(
-    dashboardPage(
-      dashboardHeader(title = "Disease Models"),
-      sidebar,
-      dashboardBody(
-        includeCSS("www/style.css"),
-        tabItems(
-          tabItem("HomePage", mod_home_ui("HomePage")),
-          tabItem("PhenoDigm", mod_phenodigm_ui("PhenoDigm")),
-          tabItem("GeneInfo", mod_gene_info_ui("GeneInfo")),
-          tabItem("PhenoDigmOther", mod_phenodigm_other_ui("PhenoDigmOther")),
-          tabItem("Review", mod_content_ui("Review"))
-
-        )
+  tagList(dashboardPage(
+    dashboardHeader(title = "Disease Models"),
+    sidebar,
+    dashboardBody(
+      includeCSS("www/style.css"),
+      tabItems(
+        tabItem("HomePage", mod_home_ui("HomePage")),
+        tabItem("PhenoDigm", mod_phenodigm_ui("PhenoDigm")),
+        tabItem("GeneInfo", mod_gene_info_ui("GeneInfo")),
+        tabItem(
+          "PhenoDigmOther",
+          mod_phenodigm_other_ui("PhenoDigmOther")
+        ),
+        tabItem("Review", mod_content_ui("Review"))
+        
       )
     )
-  )
+  ))
   
 }
 
 app_server <- function(input, output, session) {
-  
   observe({
     tab <- input$tabs
     

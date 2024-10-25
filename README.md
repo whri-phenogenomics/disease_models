@@ -4,7 +4,7 @@ Can be found at:
 
 https://lethalphenotypes.research.its.qmul.ac.uk/
 
-The data currently displayed in the app corresponds to DR20.1, and is available in the data folder.
+The data currently displayed in the app corresponds to DR20.1.
 
 ### Repository contents
 

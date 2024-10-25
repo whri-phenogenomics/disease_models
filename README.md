@@ -2,7 +2,7 @@
 
 Can be found at:
 
-https://lethalphenotypes.research.its.qmul.ac.uk/
+https://diseasemodels.research.its.qmul.ac.uk/
 
 The data currently displayed in the app corresponds to DR20.1.
 

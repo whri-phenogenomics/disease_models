@@ -15,3 +15,4 @@ shiny::runApp()
 ```
 Alternatively, the Run App functionality can be used within RStudio.
 
+#### This code repository is licensed under GPLv3, however, relevant data licenses should be found at original source.
